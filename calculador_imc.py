@@ -128,7 +128,13 @@ while True:
                 pass  # Criar Tarefa (1)
             
             elif sub_opc == 3:
-                pass  # Criar Tarefa (2)
+                if len(avaliados) == 0:
+                    print("nenhum Avaliado")
+                else:
+                    avaliados_imc = sorted(avaliados, key= lambda x: x[2])
+                    print("Avaliados por IMC:")
+                    for dados in avaliados_imc:
+                        print(f"ID: {dados[0]}, O IMC de {dados[1]} é {dados[2]} e está classificado como: {dados[3]}")
             
             elif sub_opc == 4:
                 pass  # Criar Tarefa (3)
@@ -171,7 +177,10 @@ while True:
         if len(avaliados) == 0:
             print("Nenhum avaliado registrado.")
         else:
-            menu_estatisticas()
+            maior_imc = max(avaliados, key=lambda x: x[2]) #armazenando o IMC maior
+            menor_imc = min(avaliados, key=lambda x: x[2]) #armazenando o IMC menor
+            print(f"O maior IMC é {maior_imc[2]} de {maior_imc[1]}, avaliado como: {maior_imc[3]}")
+            print(f"O menor IMC é {menor_imc[2]} de {menor_imc[1]}, avaliado como: {menor_imc[3]}")
     
     elif opc == 6:
         menu_salvar_carregar()

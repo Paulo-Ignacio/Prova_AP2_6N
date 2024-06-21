@@ -1,0 +1,4 @@
+1,raul,29.06,Sobrepeso
+2,Amanda,22.92,Peso Ideal
+3,Arthur,26.81,Sobrepeso
+4,Guilherme,31.02,Obesidade Grau I
