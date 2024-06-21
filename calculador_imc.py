@@ -47,8 +47,21 @@ def menu_estatisticas():
         
         if opc == 1:
             pass  # Criar Tarefa (4)
+#======================================================================================================
         elif opc == 2:
             pass  # Criar Tarefa (5)
+            def pegar_imc(avaliado):
+                return avaliado[2]
+            
+            if len(avaliados) == 0:
+                print("Nenhum avaliado registrado.")
+            else:
+                maior_imc = max(avaliados, key=pegar_imc)
+                menor_imc = min(avaliados, key=pegar_imc)
+                
+                print(f"O maior IMC é {maior_imc[2]} de {maior_imc[1]} {maior_imc[3]} ")
+                print(f"O menor IMC é {menor_imc[2]} de {menor_imc[1]} {menor_imc[3]} ")
+#======================================================================================================
         elif opc == 3:
             pass  # Criar Tarefa (6)
         elif opc == 4:
@@ -83,13 +96,13 @@ while True:
     print("*********************************")
     
     print("""MENU
-          1 - Calcular IMC
-          2 - Exibir Resultados
-          3 - Atualizar Dados de um Avaliado
-          4 - Remover um Avaliado
-          5 - Estatísticas
-          6 - Salvar e Carregar Dados
-          7 - Sair""")
+        1 - Calcular IMC
+        2 - Exibir Resultados
+        3 - Atualizar Dados de um Avaliado
+        4 - Remover um Avaliado
+        5 - Estatísticas
+        6 - Salvar e Carregar Dados
+        7 - Sair""")
     
     opc = int(input("Escolha uma opção: "))
     
@@ -113,11 +126,11 @@ while True:
             print("*******EXIBIÇÃO DE RESULTADOS*****")
             print("*********************************")
             print("""SUBMENU DE EXIBIÇÃO DE RESULTADOS:
-                  1 - Imprimir Todos os Resultados
-                  2 - Imprimir por ID
-                  3 - Imprimir Avaliados Ordenados por Nome
-                  4 - Imprimir Avaliados Ordenados por IMC
-                  5 - Voltar ao Menu Principal""")
+                1 - Imprimir Todos os Resultados
+                2 - Imprimir por ID
+                3 - Imprimir Avaliados Ordenados por Nome
+                4 - Imprimir Avaliados Ordenados por IMC
+                5 - Voltar ao Menu Principal""")
             sub_opc = int(input("Escolha uma opção: "))
             
             if sub_opc == 1:
