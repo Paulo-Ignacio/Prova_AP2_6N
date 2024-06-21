@@ -125,7 +125,15 @@ while True:
                     print(f"ID:{dados[0]} O IMC de {dados[1]} é {dados[2]} e está classificado como: {dados[3]}")
             
             elif sub_opc == 2:
-                pass  # Criar Tarefa (1)
+                id_procurada = int(input("Digite a Id do avaliado: "))
+                encontrado = False
+                for dados in avaliados:
+                    if dados[0] == id_procurada:
+                        print(f"ID:{dados[0]} O IMC de {dados[1]} é {dados[2]} e está classificado como: {dados[3]}")
+                        encontrado = True
+                        break
+                if not encontrado:
+                    print("Id não encontrada.")
             
             elif sub_opc == 3:
                 pass  # Criar Tarefa (2)
