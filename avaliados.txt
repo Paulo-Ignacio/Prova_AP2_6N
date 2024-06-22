@@ -1,0 +1,4 @@
+1,Mikael,24.06,Peso Ideal
+2,Diovane,29.22,Sobrepeso
+3,Leonardo,26.78,Sobrepeso
+1,Paulo,32.04,Obesidade Grau I

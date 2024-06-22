@@ -46,7 +46,13 @@ def menu_estatisticas():
         opc = int(input("Escolha uma opção: "))
         
         if opc == 1:
-            pass  # Criar Tarefa (4)
+            imcs = []
+            for i in avaliados:
+                for item in i:
+                    imc = i[2]
+                    imcs.append(imc)
+            media_imc = sum(imcs) / len(imcs)
+            print(f"A média dos IMCs é: {media_imc:.2f}")
         elif opc == 2:
             pass  # Criar Tarefa (5)
         elif opc == 3:
